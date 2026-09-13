@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="CloudContact - A serverless contact form powered by AWS."
+    >
+
+    <title>CloudContact | AWS Serverless</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container nav">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">☁</span>
+                <span>CloudContact</span>
+            </a>
+
+            <div class="aws-badge">
+                <span class="status-dot"></span>
+                AWS Serverless
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+
+                <!-- Left Side -->
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span>✦</span>
+                        Powered by AWS
+                    </div>
+
+                    <h1>
+                        Let's build something
+                        <span>great together.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Have a question, suggestion, or project idea?
+                        Send us a message and we'll get back to you.
+                    </p>
+
+                    <div class="features">
+
+                        <div class="feature">
+                            <div class="feature-icon">⚡</div>
+                            <div>
+                                <h3>Serverless</h3>
+                                <p>Powered by AWS Lambda</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">🔒</div>
+                            <div>
+                                <h3>Secure</h3>
+                                <p>Built with cloud best practices</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">☁</div>
+                            <div>
+                                <h3>Cloud Hosted</h3>
+                                <p>Deployed on Amazon S3</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Right Side - Contact Form -->
+                <div class="form-wrapper">
+
+                    <div class="form-card">
+
+                        <div class="form-header">
+                            <div class="form-icon">
+                                ✉
+                            </div>
+
+                            <div>
+                                <h2>Send a message</h2>
+                                <p>We'll respond as soon as possible.</p>
+                            </div>
+                        </div>
+
+
+                        <form id="contactForm">
+
+                            <!-- Name -->
+                            <div class="form-group">
+                                <label for="name">
+                                    Your name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="John Doe"
+                                    maxlength="50"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                                <small class="field-error" id="nameError"></small>
+                            </div>
+
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">
+                                    Email address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="john@example.com"
+                                    maxlength="100"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                                <small class="field-error" id="emailError"></small>
+                            </div>
+
+
+                            <!-- Message -->
+                            <div class="form-group">
+                                <label for="message">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    maxlength="500"
+                                    placeholder="Tell us a little about your idea..."
+                                    required
+                                ></textarea>
+
+                                <div class="textarea-footer">
+                                    <small
+                                        class="field-error"
+                                        id="messageError"
+                                    ></small>
+
+                                    <small id="characterCount">
+                                        0 / 500
+                                    </small>
+                                </div>
+                            </div>
+
+
+                            <!-- Submit -->
+                            <button
+                                type="submit"
+                                class="submit-btn"
+                                id="submitBtn"
+                            >
+                                <span id="buttonText">
+                                    Send message
+                                </span>
+
+                                <span class="button-arrow">
+                                    →
+                                </span>
+                            </button>
+
+
+                            <!-- Response message -->
+                            <div
+                                id="responseMessage"
+                                class="response-message"
+                                role="alert"
+                            ></div>
+
+                        </form>
+
+                    </div>
+
+                    <p class="form-note">
+                        🔒 Your information is handled securely.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= ARCHITECTURE ================= -->
+        <section class="architecture">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        <span>☁</span>
+                        Cloud Architecture
+                    </div>
+
+                    <h2>
+                        Simple. Serverless. Scalable.
+                    </h2>
+
+                    <p>
+                        This application demonstrates how AWS services
+                        can work together to power a real-world workflow.
+                    </p>
+
+                </div>
+
+
+                <div class="architecture-flow">
+
+                    <div class="architecture-card">
+                        <div class="architecture-icon">🌐</div>
+                        <h3>Browser</h3>
+                        <p>Contact form</p>
+                    </div>
+
+                    <div class="flow-arrow">→</div>
+
+                    <div class="architecture-card">
+                        <div class="architecture-icon">🪣</div>
+                        <h3>Amazon S3</h3>
+                        <p>Static website</p>
+                    </div>
+
+                    <div class="flow-arrow">→</div>
+
+                    <div class="architecture-card">
+                        <div class="architecture-icon">🔗</div>
+                        <h3>API Gateway</h3>
+                        <p>HTTP request</p>
+                    </div>
+
+                    <div class="flow-arrow">→</div>
+
+                    <div class="architecture-card">
+                        <div class="architecture-icon">λ</div>
+                        <h3>Lambda</h3>
+                        <p>Process & validate</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <div class="logo footer-logo">
+                    <span class="logo-icon">☁</span>
+                    <span>CloudContact</span>
+                </div>
+
+                <p>
+                    A beginner-friendly AWS serverless project.
+                </p>
+            </div>
+
+            <div class="footer-right">
+                <span>Built with</span>
+                <strong>AWS ☁</strong>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Our JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
